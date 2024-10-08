@@ -13,7 +13,7 @@ Welcome to the **Quantum Information and Machine Learning** repository! This rep
    A neural network designed to classify whether a two-qubit quantum state is entangled or not. The model provides an efficient and automated approach to identifying entanglement, a key resource in quantum computing and quantum communication.
 
 3. **Physics-Informed Neural Networks (PINNs) for Differential Equations in Physics**  
-   This project leverages PINNs to solve various differential equations critical in physics:
+   This project leverages PINNs to solve some important differential equations in physics:
    - **Schrödinger Equation**: Solves the time evolution of quantum states.
    - **Helmholtz Equation**: Simulates the spatial evolution of electromagnetic waves.
    - **Wave Equation**: Models the behavior of waves in different media.
@@ -21,7 +21,7 @@ Welcome to the **Quantum Information and Machine Learning** repository! This rep
 
 ## Repository Structure
 
-Each project is contained within its own directory, with detailed explanations and examples to guide you through their functionality and implementation. These examples highlight the power of machine learning to solve complex quantum and physical systems.
+Each project is contained within its own directory, with explanations and examples to guide you through their functionality and implementation. These examples highlight the power of machine learning to solve complex quantum and physical systems.
 
 ## Requirements
 
