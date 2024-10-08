@@ -35,7 +35,4 @@ To run these projects, you'll need the following dependencies:
   - random
   - tqdm
   - scipy
-
-You can install the required libraries by running:
-```bash
-pip install -r requirements.txt
+ 
