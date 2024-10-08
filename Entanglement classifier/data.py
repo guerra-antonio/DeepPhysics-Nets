@@ -33,7 +33,7 @@ def data_peres(rank = None):
         # If no eigenvalue is negative, the state is separable (label = 0)
         return A, 0
 
-def create_dataset(num_samples = int, criterion = str, rank = None):
+def create_dataset(num_samples = int, criterion = str, rank = None, device = "cpu"):
     # Creates a dataset of quantum states and labels based on a given criterion.
     
     # Parameters:
@@ -44,8 +44,8 @@ def create_dataset(num_samples = int, criterion = str, rank = None):
     # X (torch.Tensor): Tensor of shape (num_samples, 2, 4, 4) containing the real and imaginary parts of the states.
     # Y (torch.Tensor): Tensor of shape (num_samples, 1) containing the labels for each state.
     
-    X = torch.Tensor()
-    Y = torch.Tensor()
+    X = torch.Tensor().to(device = device)
+    Y = torch.Tensor().to(device = device)
     
     if criterion == "werner":
         for _ in tqdm(range(num_samples), desc="Generating Werner states"):
@@ -54,11 +54,11 @@ def create_dataset(num_samples = int, criterion = str, rank = None):
 
             # Label: 1 if p > 1/3 (entangled), else 0
             label = 1 if p > 1/3 else 0
-            label = torch.Tensor([label])
+            label = torch.Tensor([label]).to(device = device)
             
             # Separate real and imaginary parts of the Werner state
             w_state = np.stack((np.real(w_state), np.imag(w_state)))
-            w_state = torch.Tensor(w_state)
+            w_state = torch.Tensor(w_state).to(device = device)
 
             # Append the state and label to torch.tensors
             X = torch.cat((X, w_state), dim = 0)
@@ -69,9 +69,9 @@ def create_dataset(num_samples = int, criterion = str, rank = None):
             # Generate a random state and its corresponding Peres criterion label
             state, label = data_peres(rank = None)
 
-            label = torch.Tensor([label])
+            label = torch.Tensor([label]).to(device = device)
             state = np.stack((np.real(state), np.imag(state)))
-            state = torch.Tensor(state)
+            state = torch.Tensor(state).to(device = device)
 
             # Append the state and label to torch.tensors
             X = torch.cat((X, state), dim = 0)
