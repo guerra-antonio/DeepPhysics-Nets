@@ -14,7 +14,6 @@ Welcome to the **Quantum Information and Machine Learning** repository! This rep
 
 3. **Physics-Informed Neural Networks (PINNs) for Differential Equations in Physics**  
    This project leverages PINNs to solve some important differential equations in physics:
-   - **Schrödinger Equation**: Solves the time evolution of quantum states.
    - **Helmholtz Equation**: Simulates the spatial evolution of electromagnetic waves.
    - **Wave Equation**: Models the behavior of waves in different media.
    - **Second Harmonic Generation Equation**: Addresses the non-linear differential equation governing the second harmonic generation in optics.
