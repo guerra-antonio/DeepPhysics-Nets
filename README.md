@@ -10,7 +10,7 @@ Welcome to the **Quantum Information and Machine Learning** repository! This rep
    This project presents a convolutional neural network (CNN)-based model that predicts the time evolution of a quantum state under the influence of any given Hamiltonian. By using convolutional layers and introducing a scalar parameter in the latent space, this model efficiently determines the quantum state's evolution after an arbitrary time. This model helps simulate and analyze dynamic quantum systems.
 
 2. **Entanglement Classifier**  
-   A neural network designed to classify whether a two-qubit quantum state is entangled or not. The model provides an efficient and automated approach to identifying entanglement, a key resource in quantum computing and quantum communication.
+   A neural network designed to classify whether a two-qubit quantum state is entangled or not. Entanglement certification is not an easy problem to tackle, so the idea behind this is to generate random states and label them with an entanglement criterion (PPT for this case). After that, the training stage updates parameters of the network that relate the quantum state to a scalar that tells us whether the state is entangled or not.
 
 3. **Physics-Informed Neural Networks (PINNs) for Differential Equations in Physics**  
    This project leverages PINNs to solve some important differential equations in physics:
